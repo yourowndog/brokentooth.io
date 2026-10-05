@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brokentooth Lamplight</title>
+<meta name="description" content="Systems, AI, software, machines and long-form writing by Sam.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="road" aria-hidden="true"></canvas>
+<div class="veil" aria-hidden="true"></div>
+
+<aside class="side">
+  <a class="mark" href="#top">brokentooth</a>
+  <nav aria-label="Sections">
+    <ol class="lamps">
+      <li><a href="#writing" data-lamp="1"><i class="head"></i><span>Writing</span><small>Four long pieces</small></a></li>
+      <li><a href="#work" data-lamp="2"><i class="head"></i><span>Work</span><small>Four projects</small></a></li>
+      <li><a href="#machines" data-lamp="3"><i class="head"></i><span>Machines</span><small>Six on the network</small></a></li>
+      <li><a href="#about" data-lamp="4" class="sodium"><i class="head"></i><span>About</span><small>Sam</small></a></li>
+    </ol>
+  </nav>
+  <p class="side-foot">brokentooth.io</p>
+</aside>
+
+<main id="top">
+  <header class="arrival" data-lamp="0">
+    <h1>Systems I run, software I build, and the long version of both.</h1>
+    <p>Writing by Sam on agents, memory, machines and the work of keeping them honest.</p>
+  </header>
+
+  <section id="writing" data-lamp="1" aria-labelledby="h-writing">
+    <h2 id="h-writing"><i class="head"></i>Writing</h2>
+    <ol class="pieces">
+      <li><a href="#"><h3>Memory is a lookup tool, not a boss</h3><p>On giving coding agents a shared past without letting it give the orders.</p><span class="meta"><time datetime="2026-09">September 2026</time><span>22 min</span></span></a></li>
+      <li><a href="#"><h3>Five machines and a ledger</h3><p>Why the cluster’s real state lives in a Git repository instead of anybody’s head.</p><span class="meta"><time datetime="2026-08">August 2026</time><span>16 min</span></span></a></li>
+      <li><a href="#"><h3>What a keyboard learns when you miss</h3><p>Reading months of my own typos to teach autocorrect where my thumbs actually land.</p><span class="meta"><time datetime="2026-06">June 2026</time><span>19 min</span></span></a></li>
+      <li><a href="#"><h3>Inform, navigate, assist, act</h3><p>A ladder for deciding how much a phone agent should be allowed to do on its own.</p><span class="meta"><time datetime="2026-04">April 2026</time><span>14 min</span></span></a></li>
+    </ol>
+  </section>
+
+  <section id="work" data-lamp="2" aria-labelledby="h-work">
+    <h2 id="h-work"><i class="head"></i>Work</h2>
+    <dl class="works">
+      <div><dt><a href="#">SOMA</a></dt><dd>An Android agent that moves from telling me things to doing them, one permission at a time.</dd></div>
+      <div><dt><a href="#">OmniBoard</a></dt><dd>A keyboard whose autocorrect is tuned from my real typing, fat fingers included.</dd></div>
+      <div><dt><a href="#">ai-memory</a></dt><dd>Shared session memory for coding agents, on every machine they run on.</dd></div>
+      <div><dt><a href="#">herdr-board</a></dt><dd>A kanban board that agents report to while they work.</dd></div>
+    </dl>
+  </section>
+
+  <section id="machines" data-lamp="3" aria-labelledby="h-machines">
+    <h2 id="h-machines"><i class="head"></i>Machines</h2>
+    <p class="names"><span>Pyrrhus</span> <span>Sleeper</span> <span>Tungsten</span> <span>Titan</span> <span>Icarion</span></p>
+    <p>Five machines carry the agents. A sixth, Weakling, receives the documentation and nothing else.</p>
+    <a class="onward" href="#">How the cluster is run</a>
+  </section>
+
+  <section id="about" data-lamp="4" class="sodium" aria-labelledby="h-about">
+    <h2 id="h-about"><i class="head"></i>About</h2>
+    <p class="closing">I’m Sam. I build systems to find out how they behave once they’re actually used, and I write the long version when something finally makes sense.</p>
+    <p>If you’re working on something nearby, I’d like to hear about it.</p>
+    <a class="onward" href="#">Email me</a>
+  </section>
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>

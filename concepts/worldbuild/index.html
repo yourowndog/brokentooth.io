@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brokentooth</title>
+<meta name="description" content="Systems, AI, software, machines and long-form writing by Sam.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@800&family=Big+Shoulders+Text:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="world" aria-hidden="true"></canvas>
+
+<div class="overlay" aria-hidden="true">
+  <svg class="pin-line" id="pinLine"><line x1="0" y1="0" x2="0" y2="0"/></svg>
+  <p class="pin" id="pin">I’m in there.</p>
+  <p class="beat" data-in="0.18" data-out="0.33">I run a small cluster of machines and build the software that lives on them.</p>
+  <p class="beat" data-in="0.37" data-out="0.51">Agents that share a memory. An assistant for my phone that is slowly being trusted to act. A keyboard that studies its own mistakes.</p>
+  <p class="beat high" data-in="0.695" data-out="0.775">This is where that work is kept, and where I write about it at length.</p>
+</div>
+
+<header class="chrome">
+  <a class="skip" href="#desk">Skip to the writing</a>
+</header>
+<p class="hint" id="hint" aria-hidden="true">Scroll to get closer</p>
+<p class="range" id="range" aria-hidden="true"><span id="rangeNum">1,004 m</span></p>
+
+<main>
+  <section id="descent" class="descent" aria-label="Brokentooth">
+    <h1 class="visually-hidden">Brokentooth</h1>
+    <p class="visually-hidden">I run a small cluster of machines and build the software that lives on them: agents that share a memory, an assistant for my phone that is slowly being trusted to act, a keyboard that studies its own mistakes. This is where that work is kept, and where I write about it at length.</p>
+  </section>
+
+  <article id="desk" class="desk">
+    <div class="sheet">
+      <p class="lede">You’re at my desk. It’s late; it usually is. Everything below was written here.</p>
+
+      <section aria-labelledby="h-writing">
+        <h2 id="h-writing">Writing</h2>
+        <ol class="pieces">
+          <li><a href="#">
+            <h3>Memory is a lookup tool, not a boss</h3>
+            <p>On giving coding agents a shared past without letting it give the orders.</p>
+            <span class="meta"><time datetime="2026-09">September 2026</time>, 22 minutes</span>
+          </a></li>
+          <li><a href="#">
+            <h3>Five machines and a ledger</h3>
+            <p>Why the cluster’s real state lives in a Git repository instead of anybody’s head.</p>
+            <span class="meta"><time datetime="2026-08">August 2026</time>, 16 minutes</span>
+          </a></li>
+          <li><a href="#">
+            <h3>What a keyboard learns when you miss</h3>
+            <p>Reading months of my own typos to teach autocorrect where my thumbs actually land.</p>
+            <span class="meta"><time datetime="2026-06">June 2026</time>, 19 minutes</span>
+          </a></li>
+          <li><a href="#">
+            <h3>Inform, navigate, assist, act</h3>
+            <p>A ladder for deciding how much a phone agent should be allowed to do on its own.</p>
+            <span class="meta"><time datetime="2026-04">April 2026</time>, 14 minutes</span>
+          </a></li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="h-work">
+        <h2 id="h-work">Work</h2>
+        <dl class="works">
+          <div><dt><a href="#">SOMA</a></dt><dd>An Android agent that moves from telling me things to doing them, one permission at a time.</dd></div>
+          <div><dt><a href="#">OmniBoard</a></dt><dd>A keyboard whose autocorrect is tuned from my real typing, fat fingers included.</dd></div>
+          <div><dt><a href="#">ai-memory</a></dt><dd>Shared session memory for coding agents, on every machine they run on.</dd></div>
+          <div><dt><a href="#">herdr-board</a></dt><dd>A kanban board that agents report to while they work.</dd></div>
+        </dl>
+      </section>
+
+      <section aria-labelledby="h-machines">
+        <h2 id="h-machines">Machines</h2>
+        <p>The rack by the desk. Five machines carry the agents; a sixth, Weakling, receives the documentation and nothing else.</p>
+        <ul class="rack">
+          <li data-unit="0">Pyrrhus</li>
+          <li data-unit="1">Sleeper</li>
+          <li data-unit="2">Tungsten</li>
+          <li data-unit="3">Titan</li>
+          <li data-unit="4">Icarion</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="h-about">
+        <h2 id="h-about">About</h2>
+        <p>I’m Sam. I build systems to find out how they behave once they’re actually used, and I write the long version when something finally makes sense.</p>
+        <p>If you’re working on something nearby, I’d like to hear about it. <a href="#">Email me</a>.</p>
+      </section>
+
+      <p class="leave"><a href="#top" id="leave">Step back outside</a></p>
+    </div>
+  </article>
+</main>
+<script src="main.js"></script>
+</body>
+</html>

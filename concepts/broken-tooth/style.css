@@ -1,0 +1,292 @@
+:root {
+  /* One committed look: an exterior at dusk. It does not switch with the viewer's theme. */
+  color-scheme: dark;
+  --ink: #000;
+  --sky: #5b676e;
+  --bone: #dde1de;
+  --type: #1d1a16;
+  --type-muted: #575249;
+  --rule: rgba(29, 26, 22, 0.16);
+  --light-0: #dfe5e8;
+  --light-1: #e5e3da;
+  --light-2: #edd9b6;
+  --light-3: #f0c78e;
+
+  --colw: min(42rem, calc(100% - 32px));
+  --pad: clamp(1.25rem, 5vw, 3.5rem);
+
+  --engineered: "Michroma", "Eurostile", "Microgramma D Extended", sans-serif;
+  --reading: "Newsreader", "Iowan Old Style", Georgia, serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  background: var(--sky);
+  color: var(--bone);
+  font-family: var(--reading);
+  font-size: 1.1875rem;
+  line-height: 1.58;
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+}
+
+#works {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+}
+
+main { position: relative; z-index: 1; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+a { color: inherit; }
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+/* ── Masthead: painted onto the left-hand structure ───────────── */
+
+.mast {
+  position: fixed;
+  z-index: 5;
+  top: 28px;
+  left: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding: 1.15rem 1.35rem 1.25rem;
+  font-family: var(--engineered);
+  background: var(--ink);
+  box-shadow: inset 0 0 0 1px rgba(176, 188, 194, 0.24), inset 0 1px 0 rgba(176, 188, 194, 0.5);
+}
+.mark {
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+.mast nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.mast nav a {
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  color: rgba(221, 225, 222, 0.78);
+  width: fit-content;
+}
+.mast nav a:hover { color: #fff; }
+
+/* ── The approach: the intact structure, before the gap opens ─── */
+
+.approach { height: 92vh; height: 92svh; }
+.tail { height: 45vh; }
+
+/* ── The shaft: the one place in the structure you can read ─── */
+
+.shaft {
+  position: relative;
+  z-index: 2;
+  width: var(--colw);
+  margin-left: clamp(16px, calc(57% - var(--colw) / 2), calc(100% - var(--colw) - 16px));
+}
+
+.shaft-inner {
+  clip-path: inset(0 var(--clip, 0px));
+  background: linear-gradient(180deg,
+    var(--light-0) 0%,
+    var(--light-1) 45%,
+    var(--light-2) 80%,
+    var(--light-3) 100%);
+  color: var(--type);
+  padding: clamp(3rem, 9vh, 6rem) var(--pad) clamp(4rem, 12vh, 7rem);
+}
+
+.statement {
+  margin: 0;
+  font-size: clamp(1.45rem, 1.05rem + 1.5vw, 2.1rem);
+  line-height: 1.3;
+  font-weight: 360;
+  letter-spacing: -0.006em;
+  text-wrap: pretty;
+}
+
+/* Each section is a floor; each floor is carried by a girder across the shaft. */
+.shaft-inner section::before {
+  content: "";
+  display: block;
+  height: 20px;
+  margin: clamp(4rem, 10vh, 6.5rem) calc(-1 * var(--pad)) 2.75rem;
+  background:
+    radial-gradient(circle, #6c787e 1.3px, transparent 1.8px) 18px 6px / 36px 20px repeat-x,
+    linear-gradient(#5d686e, #5d686e) 0 0 / 100% 1px no-repeat,
+    linear-gradient(#2a3236, #2a3236) 0 12px / 100% 1px no-repeat,
+    var(--ink);
+}
+
+h2 {
+  margin: 0 0 2.25rem;
+  font-family: var(--engineered);
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: 0.06em;
+}
+
+section > p { margin: 0 0 1.1em; max-width: 34em; }
+
+/* Writing */
+.pieces {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pieces li { border-top: 1px solid var(--rule); }
+.pieces li:last-child { border-bottom: 1px solid var(--rule); }
+.pieces a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 2rem;
+  padding: 1.5rem 0 1.6rem;
+  text-decoration: none;
+}
+.pieces h3 {
+  grid-column: 1;
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.3rem, 1.1rem + 0.7vw, 1.6rem);
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+.pieces p {
+  grid-column: 1;
+  margin: 0;
+  color: var(--type-muted);
+  font-size: 1.0625rem;
+  line-height: 1.45;
+  max-width: 30em;
+}
+.pieces .meta {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+  padding-top: 0.45rem;
+  font-family: var(--engineered);
+  font-size: 0.625rem;
+  letter-spacing: 0.04em;
+  color: var(--type-muted);
+  white-space: nowrap;
+}
+.pieces a:hover h3 {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.onward {
+  display: inline-block;
+  margin-top: 1.75rem;
+  font-family: var(--engineered);
+  font-size: 0.6875rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 3px;
+}
+
+/* Work */
+.works { margin: 0; }
+.works > div {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  gap: 1.5rem;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--rule);
+}
+.works dt {
+  font-family: var(--engineered);
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  padding-top: 0.35rem;
+}
+.works dt a { text-decoration: none; }
+.works dt a:hover { text-decoration: underline; text-underline-offset: 0.3em; }
+.works dd { margin: 0; line-height: 1.45; }
+
+/* Machines */
+.names {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2em 0.9em;
+  font-family: var(--engineered);
+  font-size: clamp(1.05rem, 0.8rem + 1.2vw, 1.55rem);
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  margin-bottom: 1.6rem !important;
+}
+
+/* About */
+.closing {
+  font-size: clamp(1.3rem, 1.05rem + 0.9vw, 1.6rem);
+  line-height: 1.38;
+  font-weight: 380;
+}
+
+/* ── Narrower screens: the masthead becomes the lintel ───────── */
+
+@media (max-width: 1000px) {
+  .mast {
+    top: 0; left: 0; right: 0;
+    height: calc(52px + env(safe-area-inset-top, 0px));
+    padding: env(safe-area-inset-top, 0px) 16px 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: inset 0 -1px 0 rgba(176, 188, 194, 0.22);
+  }
+  .mark { font-size: 0.75rem; }
+  .mast nav { flex-direction: row; gap: 1.1rem; }
+  .shaft { margin-left: calc(50% - var(--colw) / 2); }
+}
+
+@media (max-width: 560px) {
+  body { font-size: 1.0625rem; }
+  .mast nav { gap: 0.85rem; }
+  .mast nav a { font-size: 0.5625rem; letter-spacing: 0.03em; }
+  .mark { font-size: 0.6875rem; }
+  .pieces a { grid-template-columns: 1fr; }
+  .pieces .meta {
+    grid-column: 1;
+    grid-row: auto;
+    flex-direction: row;
+    gap: 1.25rem;
+    align-items: baseline;
+    padding-top: 0.75rem;
+  }
+  .works > div { grid-template-columns: 1fr; gap: 0.35rem; }
+}

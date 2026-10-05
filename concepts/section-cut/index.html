@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brokentooth</title>
+<meta name="description" content="Systems, AI, software, machines and long-form writing by Sam.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="cut" aria-hidden="true"></canvas>
+<a class="skip" href="#writing">Skip to writing</a>
+
+<aside class="side" data-open="false">
+  <div class="side-head">
+    <a class="mark" href="#roof">brokentooth</a>
+    <button class="index-toggle" type="button" aria-expanded="false" aria-controls="index">
+      <span class="here">Roof</span>
+      <span class="toggle-word">Index</span>
+    </button>
+  </div>
+  <nav id="index" class="index" aria-label="Site sections">
+    <svg class="elev" aria-hidden="true"></svg>
+    <ol class="floors">
+      <li><a href="#roof" data-floor="roof">Roof</a></li>
+      <li><a href="#writing" data-floor="writing">Writing</a></li>
+      <li><a href="#work" data-floor="work">Work</a></li>
+      <li><a href="#machines" data-floor="machines">Machines</a></li>
+      <li><a href="#about" data-floor="about">About</a></li>
+    </ol>
+  </nav>
+  <p class="side-foot"><a href="#">Email me</a></p>
+</aside>
+
+<main>
+  <section id="roof" class="floor roof" aria-labelledby="h-roof">
+    <p class="statement">I run a small cluster of machines and build the software that lives on them: agents that share a memory, an assistant for my phone that is slowly being trusted to act, a keyboard that studies its own mistakes. This is where that work is kept, and where I write about it at length.</p>
+    <h1 id="h-roof" class="sign">brokentooth</h1>
+    <svg class="walker" viewBox="0 0 12 34" aria-hidden="true"><path d="M6 0c1.7 0 2.6 1.3 2.6 2.9S7.7 6 6 6 3.4 4.5 3.4 2.9 4.3 0 6 0zM3 7h6l1.6 1.2.9 11.3-1.6.4L9 13.2 8.6 33.6H6.8L6.2 21h-.4l-.6 12.6H3.4L3 13.2l-.9 6.7-1.6-.4 1-11.3z"/></svg>
+  </section>
+
+  <section id="writing" class="floor" aria-labelledby="h-writing">
+    <div class="room">
+      <h2 id="h-writing">Writing</h2>
+      <ol class="pieces">
+        <li><a href="#">
+          <h3>Memory is a lookup tool, not a boss</h3>
+          <p>On giving coding agents a shared past without letting it give the orders.</p>
+          <span class="meta"><time datetime="2026-09">September 2026</time><span>22 min</span></span>
+        </a></li>
+        <li><a href="#">
+          <h3>Five machines and a ledger</h3>
+          <p>Why the cluster’s real state lives in a Git repository instead of anybody’s head.</p>
+          <span class="meta"><time datetime="2026-08">August 2026</time><span>16 min</span></span>
+        </a></li>
+        <li><a href="#">
+          <h3>What a keyboard learns when you miss</h3>
+          <p>Reading months of my own typos to teach autocorrect where my thumbs actually land.</p>
+          <span class="meta"><time datetime="2026-06">June 2026</time><span>19 min</span></span>
+        </a></li>
+        <li><a href="#">
+          <h3>Inform, navigate, assist, act</h3>
+          <p>A ladder for deciding how much a phone agent should be allowed to do on its own.</p>
+          <span class="meta"><time datetime="2026-04">April 2026</time><span>14 min</span></span>
+        </a></li>
+      </ol>
+      <a class="onward" href="#">All writing</a>
+    </div>
+  </section>
+
+  <section id="work" class="floor" aria-labelledby="h-work">
+    <div class="room">
+      <h2 id="h-work">Work</h2>
+      <dl class="projects">
+        <div><dt><a href="#">SOMA</a></dt><dd>An Android agent that moves from telling me things to doing them, one permission at a time.</dd></div>
+        <div><dt><a href="#">OmniBoard</a></dt><dd>A keyboard whose autocorrect is tuned from my real typing, fat fingers included.</dd></div>
+        <div><dt><a href="#">ai-memory</a></dt><dd>Shared session memory for coding agents, on every machine they run on.</dd></div>
+        <div><dt><a href="#">herdr-board</a></dt><dd>A kanban board that agents report to while they work.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="machines" class="floor" aria-labelledby="h-machines">
+    <div class="room">
+      <h2 id="h-machines">Machines</h2>
+      <ul class="names">
+        <li>Pyrrhus</li><li>Sleeper</li><li>Tungsten</li><li>Titan</li><li>Icarion</li>
+      </ul>
+      <p>Five machines carry the agents. A sixth, Weakling, receives the documentation and nothing else.</p>
+      <a class="onward" href="#">How the cluster is run</a>
+    </div>
+  </section>
+
+  <section id="about" class="floor" aria-labelledby="h-about">
+    <div class="room">
+      <h2 id="h-about">About</h2>
+      <p class="closing">I’m Sam. I build systems to find out how they behave once they’re actually used, and I write the long version when something finally makes sense.</p>
+      <p>If you’re working on something nearby, I’d like to hear about it.</p>
+      <a class="onward warm" href="#">Email me</a>
+    </div>
+  </section>
+  <div class="footing" aria-hidden="true"></div>
+</main>
+<script src="main.js"></script>
+</body>
+</html>
